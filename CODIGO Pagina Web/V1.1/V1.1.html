@@ -4,15 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repocitor automático V1.1</title>
-    <link rel="stylesheet" href="V1.css">
+    <link rel="stylesheet" href="V1.1.css">
     <link rel="shortcut icon" href="https://img2.gratispng.com/20180427/uee/kisspng-automation-computer-icons-industry-factory-industrial-vector-5ae2ede0965c83.7180453015248214726159.jpg" type="image/x-icon">
     <!-- Enlaza el archivo JavaScript externo -->
-    <script src="V1.js"></script>
+    <script src="V1.1.js">    
+    
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { } from 'firebase/firestore';
+import { } from 'firebase/auth';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDXeyvGiS4TLDVqaVfcKs-G7NzgODdm_IE",
+  authDomain: "v1-octubre.firebaseapp.com",
+  projectId: "v1-octubre",
+  storageBucket: "v1-octubre.appspot.com",
+  messagingSenderId: "944984034827",
+  appId: "1:944984034827:web:dd9646cc7c4dda3792010e",
+  measurementId: "G-JK5N3RK796"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
 </head>
 <body>
 
+    
 <button onclick="AgregarNuevoProduto()">Agregar Nuevo Producto</button>
 <script>
+
+
     function AgregarNuevoProduto(){
         let Name = prompt("Nombre:") ;
         let RutImag = prompt("Ruta de Imagen:");
