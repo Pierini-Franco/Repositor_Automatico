@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttom Firebase</title>
+    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+</head>
+<body>
+
+    <button id="cambiarValor">Cambiar Valor</button>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+    <script>
+        // Agrega aquí tu configuración de Firebase
+var firebaseConfig = {
+        apiKey: "AIzaSyA9gpyxr2cPPfPULEr5DyAQERn90ye3Kxw",
+        authDomain: "prueba-esp32-b509c.firebaseapp.com",
+        databaseURL: "https://prueba-esp32-b509c-default-rtdb.firebaseio.com",
+        projectId: "prueba-esp32-b509c",
+        storageBucket: "prueba-esp32-b509c.appspot.com",
+        messagingSenderId: "226137680995",
+        appId: "1:226137680995:web:ba9d80e60daae8d1c99c56"
+        };
+                                                                 
+        // Inicializa Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Obtén una referencia a la base de datos
+        var database = firebase.database();
+
+        // Obtén una referencia al botón
+        var cambiarValorButton = document.getElementById("cambiarValor");
+
+        // Agrega un evento click al botón
+        cambiarValorButton.addEventListener("click", function () {
+            // Obtiene la referencia al nodo que contiene el valor booleano
+            var valorBooleanoRef = database.ref("Datos/valorBooleano");
+
+            // Obtiene el valor actual del nodo
+            valorBooleanoRef.once("value", function (snapshot) {
+                // Cambia el valor entre true y false
+                var nuevoValor = !snapshot.val();
+
+                // Actualiza el valor en la base de datos
+                valorBooleanoRef.set(nuevoValor, function (error) {
+                    if (error) {
+                        console.error("Error al cambiar el valor: " + error);
+                    } else {
+                        console.log("Valor cambiado exitosamente a " + nuevoValor);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
