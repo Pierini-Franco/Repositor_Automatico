@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Log in</title>
 </head>
 <body>
@@ -25,8 +26,16 @@
             <div class="password_box">
                 <label class="password" for="password">Contraseña</label>
                 <br>
-                <input type="text" id="password" name="password" placeholder="example123">
+                <input type="password" id="password" name="password" placeholder="example123">
+                <div class="checkbox_password">
+                    <input type="checkbox" id="checkbox" name="checkbox" onclick="showHide()">
+                    <p class="text_checkbox_password">
+                        Mostrar contraseña
+                    </p>
+                </div>
+                
             </div>
+            
             <button class="login_button">
                 Log in
             </button>
