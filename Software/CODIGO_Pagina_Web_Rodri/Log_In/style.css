@@ -58,7 +58,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 300px;
-    height: 200px;
+    height: 230px;
     border: 1px groove #7a7a7a;
     border-radius: 10px;
     background-color: #f3efef;
@@ -87,7 +87,7 @@ main {
     font-size: 18px;
 }
 
-input {
+input[type="text"], input[type="password"] {
     margin-top: 4px;
     height: 25px;
     width: 230px;
@@ -96,8 +96,32 @@ input {
     background-color: #f7f7f7;
 }
 
-input:focus {
+input[type="text"]:focus, input[type="password"]:focus {
     outline: 2px solid rgb(49, 108, 216);
+}
+
+.checkbox_password {
+    display: grid;
+    position: relative;
+    margin-top: 10px;
+    width: 230px;
+    height: 20px;
+    background-color: transparent;
+}
+
+.text_checkbox_password {
+    position: absolute;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 24px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    bottom: 0;  
+    height: 18px;
+    width: 16px;
 }
 
 .login_button {
