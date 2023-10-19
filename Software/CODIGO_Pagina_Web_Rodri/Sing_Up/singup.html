@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Log in</title>
+</head>
+<body>
+    <header>
+        <div class="navegacion">
+            <img class="guardia_imperial_white" src="guardia_imperial_white.jpg" alt="Repositor Automatico">
+            <p class="p_navegation">
+                
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <img class="guardia_imperial" src="guardia_imperial.jpg" alt="Repositor Automatico">
+        <div class="card_1">
+            <p class="p1"></p>
+            <p class="p2">Crear una cuenta</p>
+        </div>
+
+        <div class="card_2">
+            <div class="user_data">
+
+                <div class="name_box">
+                    <label class="name" for="name">Nombre</label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="Raul">
+                </div>
+
+                <div class="lastname_box">
+                    <label class="lastname" for="lastname">Apellidos</label>
+                    <br>
+                    <input type="text" id="lastname" name="lastname" placeholder="Gonzalez">
+                </div>
+
+                <div class="email_box">
+                    <label class="email" for="email">Email</label>
+                    <br>
+                    <input type="text" id="email" name="email" placeholder="example123@mail.com">
+                </div>
+                
+                <div class="password_box">
+
+                    <label class="password" for="password">Contraseña</label>
+                    <br>
+                    <input type="password" id="password" name="password" placeholder="example123">
+                    
+                </div>
+
+                <div class="re_password_box">
+                    <label class="re_password" for="re_password">Re-ingresar contraseña</label>
+                    <br>
+                    <input type="password" id="re_password" name="re_password" placeholder="example123" style="margin-bottom: 15px;" oninput="checkPassword()">
+                    <div class="same_password" style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                        
+                        <div class="dot" id="dot" style="position: absolute; left: 0; width: 10px; height: 10px; border-radius: 50%; background-color: #7a7a7a;"></div>
+                        <p class="p_same_password" style="position: absolute; left: 0; margin-left: 14px; font-style: italic; font-size: 15px;">
+                            Las contraseñas deben ser iguales
+                        </p>
+                    </div> 
+                    <div class="checkbox_password">
+                        <input type="checkbox" id="checkbox" name="checkbox" onclick="showHide()">
+                        <p class="text_checkbox_password">
+                            Mostrar contraseña
+                        </p>
+                    </div>
+                </div>
+                
+                <button class="login_button" id="login_button" onclick="checkLogin()">
+                    Log in
+                </button>
+            </div>
+            
+        </div>
+        <div class="card_3">
+            <p class="p3">
+                Si ya tienes una...
+            </p>
+            <a href="">
+                Acceder a cuenta
+            </a>
+        </div>
+    </main>
+</body>
+</html>
