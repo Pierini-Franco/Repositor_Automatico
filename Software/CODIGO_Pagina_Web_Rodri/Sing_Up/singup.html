@@ -30,26 +30,26 @@
                 <div class="name_box">
                     <label class="name" for="name">Nombre</label>
                     <br>
-                    <input type="text" id="name" name="name" placeholder="Raul">
+                    <input type="text" id="name" name="name" placeholder="Raul" onclick="resetStyleName()">
                 </div>
 
                 <div class="lastname_box">
                     <label class="lastname" for="lastname">Apellidos</label>
                     <br>
-                    <input type="text" id="lastname" name="lastname" placeholder="Gonzalez">
+                    <input type="text" id="lastname" name="lastname" placeholder="Gonzalez" onclick="resetStyleLastname()">
                 </div>
 
                 <div class="email_box">
                     <label class="email" for="email">Email</label>
                     <br>
-                    <input type="text" id="email" name="email" placeholder="example123@mail.com">
+                    <input type="text" id="email" name="email" placeholder="example123@mail.com" onclick="resetStyleEmail()">
                 </div>
                 
                 <div class="password_box">
 
                     <label class="password" for="password">Contraseña</label>
                     <br>
-                    <input type="password" id="password" name="password" placeholder="example123">
+                    <input type="password" id="password" name="password" placeholder="example123" onclick="resetStylePasswords()" oninput="checkPassword()">
                     
                 </div>
 
