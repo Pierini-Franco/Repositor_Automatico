@@ -7,3 +7,8 @@ function showHide(){
         x.type = "password";
     }
 }
+
+function login(){
+    var x = document.getElementById("password").value;
+    console.log(x)
+}
