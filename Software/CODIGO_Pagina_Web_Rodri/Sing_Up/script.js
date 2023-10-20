@@ -11,8 +11,10 @@ function showHide(){
     }
 }
 
+var bool_password;
+
 function checkPassword(){
-    var bool_password;
+    
     var password = document.getElementById("password");
     var re_password = document.getElementById("re_password");
     var dot = document.getElementById("dot");
@@ -32,8 +34,24 @@ function checkPassword(){
     return bool_password;
 }
 
+function resetStyle(){
+    var name = document.getElementById("name");
+    var lastname = document.getElementById("lastname");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var re_password = document.getElementById("re_password");
+    
+    name.style="border: 1px solid #b91d08;";
+    lastname.style="border: 1px solid #b91d08;";
+    email.style="border: 1px solid #b91d08;";
+    password.style="border: 1px solid #b91d08;";
+    re_password.style="border: 1px solid #b91d08; margin-bottom: 15px";
+}
+
+var bool_userdata;
+
 function checkApplication(){
-    var bool_userdata;
+    
     var name = document.getElementById("name");
     var lastname = document.getElementById("lastname");
     var email = document.getElementById("email");
@@ -41,27 +59,29 @@ function checkApplication(){
     var re_password = document.getElementById("re_password");
 
     if (!(name && name.value)) {
-        name.style="border: 1px solid #b91d08;"
+        resetStyle();
+        bool_userdata = false
+        console.log("No hay nada en nombre");
+    }
+    else if (!(lastname && lastname.value)) {
+        resetStyle();
         bool_userdata = false
     }
-    if (!(lastname && lastname.value)) {
-        lastname.style="border: 1px solid #b91d08;"
+    else if (!(email && email.value)) {
+        resetStyle();
         bool_userdata = false
     }
-    if (!(email && email.value)) {
-        email.style="border: 1px solid #b91d08;"
+    else if (!(password && password.value)){
+        resetStyle();
         bool_userdata = false
     }
-    if(!(password && password.value)){
-        password.style="border: 1px solid #b91d08;"
+    else if (!(re_password && re_password.value)){
+        resetStyle();
         bool_userdata = false
     }
-    if(!(re_password && re_password.value)){
-        re_password.style="border: 1px solid #b91d08; margin-bottom: 15px"
-        bool_userdata = false
-    }
-    else{
+    else {
         bool_userdata = true;
+        console.log("soy verdadero");
     }
     return bool_userdata;
 }
@@ -74,7 +94,9 @@ function checkLogin(){
     else{
         alert("Redirigir a otra pag");
         var x = document.getElementById("password").value;
-        console.log(x)
+        console.log(x);
+        console.log(bool_userdata);
+        console.log(bool_password);
     }
 }
 
