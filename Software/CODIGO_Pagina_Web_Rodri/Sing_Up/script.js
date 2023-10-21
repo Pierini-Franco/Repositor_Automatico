@@ -34,7 +34,7 @@ function checkPassword(){
     return bool_password;
 }
 
-function resetStyle(){
+function setStyle(){
     var name = document.getElementById("name");
     var lastname = document.getElementById("lastname");
     var email = document.getElementById("email");
@@ -59,24 +59,24 @@ function checkApplication(){
     var re_password = document.getElementById("re_password");
 
     if (!(name && name.value)) {
-        resetStyle();
+        setStyle();
         bool_userdata = false
         console.log("No hay nada en nombre");
     }
     else if (!(lastname && lastname.value)) {
-        resetStyle();
+        setStyle();
         bool_userdata = false
     }
     else if (!(email && email.value)) {
-        resetStyle();
+        setStyle();
         bool_userdata = false
     }
     else if (!(password && password.value)){
-        resetStyle();
+        setStyle();
         bool_userdata = false
     }
     else if (!(re_password && re_password.value)){
-        resetStyle();
+        setStyle();
         bool_userdata = false
     }
     else {
