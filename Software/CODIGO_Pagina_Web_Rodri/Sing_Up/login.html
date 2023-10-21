@@ -24,27 +24,27 @@
         </div>
 
         <div class="card_2_login">
-            <div class="email_box">
-                <label class="email" for="email">Email</label>
-                <br>
-                <input type="text" id="email" name="email" placeholder="example123@mail.com">
-            </div>
-            <div class="password_box">
-                <label class="password" for="password">Contraseña</label>
-                <br>
-                <input type="password" id="password" name="password" placeholder="example123">
-                <div class="checkbox_password">
-                    <input type="checkbox" id="checkbox" name="checkbox" onclick="showHide()">
-                    <p class="text_checkbox_password">
-                        Mostrar contraseña
-                    </p>
+            <form action="">
+                <div class="email_box">
+                    <label class="email" for="email">Email</label>
+                    <br>
+                    <input type="text" id="email" name="email" placeholder="example123@mail.com">
                 </div>
-                
-            </div>
+                <div class="password_box">
+                    <label class="password" for="password">Contraseña</label>
+                    <br>
+                    <input type="password" id="password" name="password" placeholder="example123">
+                    <div class="checkbox_password">
+                        <input type="checkbox" id="checkbox" name="checkbox" onclick="showHide()">
+                        <p class="text_checkbox_password">
+                            Mostrar contraseña
+                        </p>
+                    </div>
+                    
+                </div>
+                <input class="login_button" type="submit" id="login_button" value="Log in" onclick="login()">
+            </form>
             
-            <button class="login_button" onclick="login()">
-                Log in
-            </button>
         </div>
         <div class="card_3">
             <p class="p3">
