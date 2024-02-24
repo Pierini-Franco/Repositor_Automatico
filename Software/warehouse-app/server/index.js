@@ -18,8 +18,13 @@ wsServer.on("connection", (connection, request) =>{
 
   console.log(username)
   console.log(uuid)
-
-  // users[uuid] = username
+  // guardar objeto connection para cada usuario
+  connections[uuid] = connection
+  // guardar username
+  users[uuid] = {
+    username: username,
+    products: { }
+  }
 })
 
 server.listen(PORT, () =>{
