@@ -10,6 +10,14 @@ const PORT = 8000
 const users = { }
 const connections = { }
 
+const handleMessage = (bytes, uuid) => {
+  const message = JSON.parse(bytes.toString())
+  const user = users[uuid]
+
+  user.products = message
+  console.log(`${user.username} ordeno ${JSON.stringify(user.products)}`)
+}
+
 // evento conexion a ws server
 wsServer.on("connection", (connection, request) =>{
   // recuperar username de la url
@@ -25,7 +33,10 @@ wsServer.on("connection", (connection, request) =>{
     username: username,
     products: { }
   }
+
+  connection.on("message", (message) => handleMessage(message, uuid))
 })
+
 
 server.listen(PORT, () =>{
   console.log(`WebSocket server running on port ${PORT}`)
