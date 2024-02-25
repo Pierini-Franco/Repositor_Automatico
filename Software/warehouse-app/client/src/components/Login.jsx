@@ -7,7 +7,10 @@ export function Login({ updateUsername }){
     <>
       <h1>Login</h1>
       <p>Ingresar nombre de usuario: </p>
-      <form >
+      <form onSubmit={(e) =>{
+        e.preventDefault()
+        updateUsername(username)
+      }}>
         <input 
           type="text"
           placeholder="username"

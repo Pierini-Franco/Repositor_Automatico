@@ -8,15 +8,15 @@ import { CartProvider } from "./context/cart.jsx";
 // header - products - footer
 
 export function Home(){
-   const { filterProducts, filters } = useFilter()
-   const filteredProducts = filterProducts(initialProductsJson)
-   console.log(filters)
-   return(
-      <CartProvider>
-         <Header />
-         <Cart />
-         <ProductCard filteredProducts={filteredProducts} />
-         <Footer />
-      </CartProvider>
-   );
+	const { filterProducts, filters } = useFilter()
+	const filteredProducts = filterProducts(initialProductsJson)
+	console.log(filters)
+	return(
+		<CartProvider>
+			<Header />
+			<Cart />
+			<ProductCard filteredProducts={filteredProducts} />
+			<Footer />
+		</CartProvider>
+	);
 };
