@@ -1,0 +1,39 @@
+{
+  "productsJson": [
+    {
+      "id": 1,
+      "name": "Ceramico piso color Cafe A 55x55",
+      "stock": 27,
+      "category": "ceramic",
+      "image": "https://distribuidoramariscal.com.gt/wp-content/uploads/2021/03/piso-ceramico-mar-de-plata-cafe-comp-705x705.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Rulemanes Timken Hm518445/10inch",
+      "stock": 15,
+      "category": "roller-bearing",
+      "image": "https://th.bing.com/th/id/OIP.VTrBsz-KdnJwLudKoPu_fQAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": 3,
+      "name": "Pernos M14 (14mm x 40mm) Hex Bolt",
+      "stock": 45,
+      "category": "screw",
+      "image": "https://th.bing.com/th/id/R.45d9d1c1fb6424d6a98822d98122acfe?rik=7Gh%2b2S5V8gNPXA&riu=http%3a%2f%2fcasoni.com.ar%2fwp-content%2fuploads%2f2018%2f05%2fmaferbul.bulon_.cabeza.hexagonal.G2.jpg&ehk=eTD3%2bAdazRb7pQ2sIF%2f0SpXPuQac0RYeJh236Djv17k%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 4,
+      "name": "CABLE ELECTRICO 1,5 MM X10M AM/VE DUOLEC",
+      "stock": 26,
+      "category": "electric",
+      "image": "https://cdn.manomano.com/images/images_products/4165555/P/8219390_1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Clavo de acero 2 pulgadas 1 kg",
+      "stock": 34,
+      "category": "screw",
+      "image": "https://ibarramayoreo.com/images/IMAGENES/10385/01.jpg"
+    }
+  ]
+}

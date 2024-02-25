@@ -1,0 +1,10 @@
+.container-filters{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.label-categoryFilter{
+  color: #f3efef;
+}

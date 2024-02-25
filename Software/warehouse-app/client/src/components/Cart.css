@@ -1,0 +1,153 @@
+.cartButton{
+  height: 40px;
+  width: 80px;
+  border-radius: 15px 0px 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a800;
+  position: fixed;
+  right: 0px;
+  top: 30px;
+  transition: .2s ease;
+}
+
+.cartButton:hover{
+  scale: 1.1;
+}
+
+.cartButton ~ input:checked ~ .cart-container{
+  display: flex;
+}
+
+.cart-container{
+  background-color: #111111f8;
+  color: #f7f7f7;
+  width: 350px;
+  max-height: 400px;
+  padding: 20px;
+  position: fixed;
+  right: 0px;
+  border-radius: 10px 0px 0px 10px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.productsCart-container{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  max-height: 350px;
+  gap: 10px;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #403d3d transparent;
+}
+
+.prCart-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prCart{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border: solid 2px #403d3d;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: transparent;
+}
+
+.quantityButtons{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  transition: all .2s ease;
+}
+
+.quantityButtons:hover{
+  opacity: 0.7;
+}
+
+.prCart-image{
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.prCart-info{
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.prCart-info strong{
+  font-size: 18px;
+  height: 25px;
+  white-space: nowrap;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.prCart-info-quantity{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.prCart-info small{
+  font-size: 16px;
+}
+
+.prCart-info input{
+  width: 40px;
+}
+
+.prCart-hrDivision{
+  background-color: #403d3d;
+  border: none;
+  height: 2px;
+  width: 300px;
+  border-radius: 3px;
+}
+
+.buttonClearCart{
+  height: 50px;
+  width: 70px;
+  background-color: #e6200a;
+  border-radius: 10px;
+  border: none;
+  transition: all .2s ease;
+}
+
+.buttonCheckCart{
+  height: 50px;
+  width: 70px;
+  background-color: #00a800;
+  border-radius: 10px;
+  border: none;
+  transition: all .2s ease;
+}
+
+.prCart-buttonsContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.buttonClearCart:hover, .buttonCheckCart:hover{
+  scale: 1.05;
+}
