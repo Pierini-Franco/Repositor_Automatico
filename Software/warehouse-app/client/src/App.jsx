@@ -1,22 +1,12 @@
-import { ProductCard } from "./components/ProductCard.jsx";
-import { Header } from './components/Header.jsx';
-import { productsJson as initialProductsJson } from './mocks/productsJson.json'
-import { useFilter } from "./hooks/useFilter.js";
-import { Footer } from "./components/Footer.jsx";
-import { Cart } from "./components/Cart.jsx";
-import { CartProvider } from "./context/cart.jsx";
-// header - products - footer
+import { useState } from "react"
+import { Home } from "./Home.jsx"
+import { Login } from "./components/Login.jsx"
 
 export function App(){
-   const { filterProducts, filters } = useFilter()
-   const filteredProducts = filterProducts(initialProductsJson)
-   console.log(filters)
-   return(
-      <CartProvider>
-         <Header />
-         <Cart />
-         <ProductCard filteredProducts={filteredProducts} />
-         <Footer />
-      </CartProvider>
-   );
-};
+  const [username, setUsername] = useState("")
+  return username ? (
+    <Home />
+  ) : (
+    <Login updateUsername={setUsername}/>
+  )
+}
