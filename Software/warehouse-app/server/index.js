@@ -29,7 +29,13 @@ const handleMessage = (bytes, uuid) => {
 
   user.products = message
   console.log(`${user.username} ordeno ${JSON.stringify(user.products)}`)
-  // enviar mensaje al broker
+  // enviar mensaje de productos al broker
+  client.publish(topic, JSON.stringify(user.products), { qos }, (error) =>{
+    if(error){
+      console.log('Cannot send message to topic')
+    }
+    console.log(`Message sent to broker: ${JSON.stringify(user.products)}`)
+  })
 }
 
 const handleClose = (uuid) =>{
