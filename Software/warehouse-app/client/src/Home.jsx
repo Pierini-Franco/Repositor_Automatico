@@ -6,8 +6,14 @@ import { Footer } from "./components/Footer.jsx";
 import { Cart } from "./components/Cart.jsx";
 import { CartProvider } from "./context/cart.jsx";
 // header - products - footer
+import useWebSocket from "react-use-websocket";
 
-export function Home(){
+export function Home({ username }){
+	const WS_URL = 'ws://127.0.0.1:8000'
+	const { sendJsonMessage } = useWebSocket(WS_URL, {
+		queryParams: {username}
+	})
+
 	const { filterProducts, filters } = useFilter()
 	const filteredProducts = filterProducts(initialProductsJson)
 	console.log(filters)

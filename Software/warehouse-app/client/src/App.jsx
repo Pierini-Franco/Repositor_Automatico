@@ -6,7 +6,7 @@ export function App(){
   const [username, setUsername] = useState("")
   console.log(username)
   return username ? (
-    <Home />
+    <Home username={username}/>
   ) : (
     <Login updateUsername={setUsername}/>
   )
