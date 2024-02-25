@@ -16,6 +16,14 @@ const handleMessage = (bytes, uuid) => {
 
   user.products = message
   console.log(`${user.username} ordeno ${JSON.stringify(user.products)}`)
+  // enviar mensaje al broker
+
+}
+
+const handleClose = (uuid) =>{
+  console.log(`${users[uuid].username} disconnected`)
+  delete users[uuid]
+  delete connections[uuid]
 }
 
 // evento conexion a ws server
@@ -33,8 +41,9 @@ wsServer.on("connection", (connection, request) =>{
     username: username,
     products: { }
   }
-
+  
   connection.on("message", (message) => handleMessage(message, uuid))
+  connection.on("close", () => handleClose(uuid))
 })
 
 
