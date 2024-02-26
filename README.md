@@ -1,5 +1,12 @@
 # Repositor Automatico
 
+## Index
+
+* [Description](#description)
+* [Demo and overview](#demo-and-overview)
+* [Notes](#notes)
+
+
 # Description
 Autonomus warehouse robot capable of storing and bringing goods pallets using a realtime order products. The goal is to develop a system meant to automate warehouses and track the stock of the goods, as well as the employees's orders.
 
@@ -8,5 +15,6 @@ Autonomus warehouse robot capable of storing and bringing goods pallets using a 
 
 # Notes
 This project is being develop and we will posting the latest updates.
+
 Leave a ⭐ if you are interested in this repo!
 
