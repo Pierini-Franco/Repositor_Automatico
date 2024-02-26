@@ -56,6 +56,11 @@
   gap: 10px;
 }
 
+.prCart-noProducts{
+  font-style: italic;
+  color: #807e7e;
+}
+
 .prCart{
   display: flex;
   flex-direction: row;
