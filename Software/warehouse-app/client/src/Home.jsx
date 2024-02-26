@@ -19,7 +19,7 @@ export function Home({ username }){
 	console.log(filters)
 	return(
 		<CartProvider>
-			<Header />
+			<Header username={username}/>
 			<Cart />
 			<ProductCard filteredProducts={filteredProducts} sendJsonMessage={sendJsonMessage}/>
 			<Footer />
