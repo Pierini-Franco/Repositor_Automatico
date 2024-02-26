@@ -3,18 +3,13 @@ import { CartFilled, CartNotFilled } from './Icons.jsx';
 import './ProductCard.css'
 import { useCart } from '../hooks/useCart.js';
 
-export function ProductCard({ filteredProducts }){
+export function ProductCard({ filteredProducts, sendJsonMessage }){
   const { cart, addToCart, removeFromCart } = useCart()
 
   const checkProductInCart = (product) =>{
     return cart.some(item => item.id === product.id)
   }
 
-  const handleClick = () =>{
-    setCart(!cartState);
-    
-  }
-  
   return(
     <>
       <section className='productsWrap'>
@@ -38,7 +33,9 @@ export function ProductCard({ filteredProducts }){
                     </h4>
                   </div>
                   <div className="prCard-buttonContainer">
-                    <button className="prCard-orderButton">
+                    <button className="prCard-orderButton" onClick={() =>{
+                      sendJsonMessage(filteredProducts.name)
+                    }}>
                       Ordenar
                     </button>
                     <button className= "prCard-cartButton" onClick={() => { isProductInCart ? removeFromCart(filteredProducts) : addToCart(filteredProducts)}}>

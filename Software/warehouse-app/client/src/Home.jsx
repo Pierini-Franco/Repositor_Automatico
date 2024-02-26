@@ -21,7 +21,7 @@ export function Home({ username }){
 		<CartProvider>
 			<Header />
 			<Cart />
-			<ProductCard filteredProducts={filteredProducts} />
+			<ProductCard filteredProducts={filteredProducts} sendJsonMessage={sendJsonMessage}/>
 			<Footer />
 		</CartProvider>
 	);
