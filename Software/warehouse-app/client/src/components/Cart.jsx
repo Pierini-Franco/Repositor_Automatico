@@ -3,9 +3,9 @@ import { CartIcon, ClearFromCartIcon, CheckCartIcon } from "./Icons.jsx"
 import './Cart.css'
 import { useCart } from "../hooks/useCart.js"
 
-export function Cart(){
+export function Cart({ sendJsonMessage }){
+
   const checkBoxId = useId()
-  const inputQuantityId = useId()
   const { cart, clearCart } = useCart()
 
   const isThereProducts = (cart) => {
@@ -65,7 +65,14 @@ export function Cart(){
             >
             <ClearFromCartIcon />
           </button>
-          <button className="buttonCheckCart">
+          <button 
+            className="buttonCheckCart" 
+            onClick={() => {
+              console.log('mensaje enviado 2')
+              console.log(cart)
+              sendJsonMessage(cart)
+            }}
+            >
             <CheckCartIcon />
           </button>
         </section>

@@ -13,14 +13,14 @@ export function Home({ username }){
 	const { sendJsonMessage } = useWebSocket(WS_URL, {
 		queryParams: {username}
 	})
-
+	
 	const { filterProducts, filters } = useFilter()
 	const filteredProducts = filterProducts(initialProductsJson)
 	console.log(filters)
 	return(
 		<CartProvider>
 			<Header username={username}/>
-			<Cart />
+			<Cart sendJsonMessage={sendJsonMessage}/>
 			<ProductCard filteredProducts={filteredProducts} sendJsonMessage={sendJsonMessage}/>
 			<Footer />
 		</CartProvider>
