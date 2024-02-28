@@ -24,17 +24,23 @@ const connections = { }
 
 const handleMessage = (bytes, uuid) => {
   const message = JSON.parse(bytes.toString())
-  console.log(typeof(message))
-  
+  console.log(message.length)
+
   // printear id de uno de los productos
   console.log(message[0].id)
   const user = users[uuid]
 
   // aca se guarda lo q yo quiero y en el formato q quiero, para q se mande al broker  --> nombre, id y cantidad
-  user.products = {
+  user.products[0] = {
     id: message[0].id,
     prname: message[0].name,
     quantity: message[0].quantity
+  }
+
+  user.products[1] = {
+    id: message[1].id,
+    prname: message[1].name,
+    quantity: message[1].quantity
   }
 
   // aca se guarda en user el mensaje completo q viene del client --> incluye nombre, id, imagenes, categoria, stock 
@@ -81,7 +87,7 @@ wsServer.on("connection", (connection, request) =>{
   // guardar username
   users[uuid] = {
     username: username,
-    products: { }
+    products: [{ }]
   }
   
   connection.on("message", (message) => handleMessage(message, uuid))
