@@ -4,7 +4,6 @@ const uuidv4 = require("uuid").v4
 const { WebSocketServer } = require('ws')
 
 const mqtt = require("mqtt")
-const { error } = require('console')
 const clientId = 'emqxnodejs' + Math.random().toString(16).substring(2, 8)
 const username = 'Rodri'
 const password = 'NodeJS'
@@ -25,16 +24,17 @@ const connections = { }
 
 const handleMessage = (bytes, uuid) => {
   const message = JSON.parse(bytes.toString())
+  console.log(typeof(message))
   const user = users[uuid]
 
   user.products = message
   console.log(`${user.username} ordeno ${JSON.stringify(user.products)}`)
   // enviar mensaje de productos al broker
-  client.publish(topic, JSON.stringify(user.products), { qos }, (error) =>{
+  client.publish(topic, JSON.stringify(user), { qos }, (error) =>{
     if(error){
       console.log('Cannot send message to topic')
     }
-    console.log(`Message sent to broker: ${JSON.stringify(user.products)}`)
+    console.log(`Message sent to broker: ${JSON.stringify(user)}`)
   })
 }
 
