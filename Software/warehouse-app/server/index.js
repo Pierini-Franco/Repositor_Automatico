@@ -25,7 +25,15 @@ const connections = { }
 const handleMessage = (bytes, uuid) => {
   const message = JSON.parse(bytes.toString())
   console.log(message.length)
-
+  // for q crea un nuevo espacio en array products donde se guarda la id, nombre y cantidad de cada 
+  // producto de llega de array message
+  for(var i = 0; i < message.length; i++){
+    user.products[i] = {
+      id: message[i].id,
+      prname: message[i].name,
+      quantity: message[i].quantity
+    }
+  }
   // printear id de uno de los productos
   console.log(message[0].id)
   const user = users[uuid]
