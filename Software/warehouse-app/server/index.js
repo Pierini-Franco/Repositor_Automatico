@@ -25,31 +25,36 @@ const connections = { }
 const handleMessage = (bytes, uuid) => {
   const message = JSON.parse(bytes.toString())
   console.log(message.length)
+  // si el mensaje no contiene productos, q no se mande nada al broker
+  if(message.length > 0){
+    // printear id de uno de los productos
+    console.log(message[0].id)
+    const user = users[uuid]
 
-  // printear id de uno de los productos
-  console.log(message[0].id)
-  const user = users[uuid]
-
-  // for q crea un nuevo espacio en array products donde se guarda la id, nombre y cantidad de cada 
-  // producto de llega de array message
-  for(var i = 0; i < message.length; i++){
-    user.products[i] = {
-      id: message[i].id,
-      prname: message[i].name,
-      quantity: message[i].quantity
+    // for q crea un nuevo espacio en array products donde se guarda la id, nombre y cantidad de cada 
+    // producto de llega de array message
+    for(var i = 0; i < message.length; i++){
+      user.products[i] = {
+        id: message[i].id,
+        prname: message[i].name,
+        quantity: message[i].quantity
+      }
     }
+
+    // aca se guarda en user el mensaje completo q viene del client --> incluye nombre, id, imagenes, categoria, stock 
+    // user.products = message
+    console.log(`${user.username} ordeno ${JSON.stringify(user.products)}`)
+    // enviar mensaje de productos al broker
+    client.publish(topic, JSON.stringify(user), { qos }, (error) =>{
+      if(error){
+        console.log('Cannot send message to topic')
+      }
+      console.log(`Message sent to broker: ${JSON.stringify(user)}`)
+    })
   }
-
-  // aca se guarda en user el mensaje completo q viene del client --> incluye nombre, id, imagenes, categoria, stock 
-  // user.products = message
-  console.log(`${user.username} ordeno ${JSON.stringify(user.products)}`)
-  // enviar mensaje de productos al broker
-  client.publish(topic, JSON.stringify(user), { qos }, (error) =>{
-    if(error){
-      console.log('Cannot send message to topic')
-    }
-    console.log(`Message sent to broker: ${JSON.stringify(user)}`)
-  })
+  else{
+    console.log('Message does not contain any product, no message sent to broker')
+  }
 }
 
 const handleClose = (uuid) =>{
