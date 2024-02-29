@@ -24,6 +24,7 @@ const connections = { }
 
 const handleMessage = (bytes, uuid) => {
   const message = JSON.parse(bytes.toString())
+  console.log(message)
   console.log(message.length)
   // si el mensaje no contiene productos, q no se mande nada al broker
   if(message.length > 0){
