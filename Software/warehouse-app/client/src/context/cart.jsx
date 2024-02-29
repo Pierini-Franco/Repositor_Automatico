@@ -16,6 +16,10 @@ export function CartProvider({ children }){
       }
     ]))
   }
+  // actualizar carrt cuando cambie la quantity de un producto
+  const updateCart = (updatedCart) => {
+    setCart(updatedCart)
+  }
 
   const removeFromCart = (product) =>{
     const newCart = cart.filter(item => item.id !== product.id )
@@ -32,6 +36,7 @@ export function CartProvider({ children }){
     <CartContext.Provider value={{
       cart,
       addToCart,
+      updateCart,
       removeFromCart,
       clearCart
     }}>
