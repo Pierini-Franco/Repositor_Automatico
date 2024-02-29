@@ -1,4 +1,4 @@
-import { useId } from "react"
+import { useId, useState } from "react"
 import { CartIcon, ClearFromCartIcon, CheckCartIcon } from "./Icons.jsx"
 import './Cart.css'
 import { useCart } from "../hooks/useCart.js"
@@ -6,7 +6,25 @@ import { useCart } from "../hooks/useCart.js"
 export function Cart({ sendJsonMessage }){
 
   const checkBoxId = useId()
-  const { cart, clearCart } = useCart()
+  const { cart, clearCart, updateCart } = useCart()
+
+  // sumar quantity del producto
+  const handleClick = (crt) =>{
+    // hallar y guardar producto q se le quiere cabiar la quantity
+    let product = cart.find((cart) => cart.name === crt.name)
+    // sumarle uno a quantity
+    product.quantity += 1
+    console.log(product)
+    // crear nuevo array con las modificacion de cantidades
+    const updatedProducts = cart.map(item => {
+      // si se halla el producto q queremos modificar, se guarda en el array el producto con la nueva cantidad 
+      if(product.name === item.name) return product
+      // si no se halla, no se modifica el producto
+      return item
+    })
+    // actualizar carrt con las quantities actualizadas
+    updateCart(updatedProducts)
+  }
 
   const isThereProducts = (cart) => {
     if(cart.length === 0){
@@ -33,7 +51,16 @@ export function Cart({ sendJsonMessage }){
                     <label htmlFor={cart.id}>
                       <small>Cantidad:</small>
                     </label>
-                    <input id={cart.id} type="number" defaultValue={cart.quantity} max={cart.stock}/>{/* product.quantity, product.stock */}
+                    <button>
+                      -
+                    </button>
+                    <small>{cart.quantity}</small>
+                    <button
+                      id={cart.id}
+                      onClick={() => {handleClick(cart)}}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </article>
