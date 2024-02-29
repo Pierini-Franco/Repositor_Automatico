@@ -34,7 +34,11 @@ export function ProductCard({ filteredProducts, sendJsonMessage }){
                   </div>
                   <div className="prCard-buttonContainer">
                     <button className="prCard-orderButton" onClick={() =>{
-                      sendJsonMessage(filteredProducts.name)
+                      console.log(filteredProducts.name)
+                      // guardar producto dentro de array
+                      const product = [filteredProducts]
+                      console.log(product)
+                      sendJsonMessage(product)
                       console.log('mensaje enviado 1')
                     }}>
                       Ordenar
