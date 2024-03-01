@@ -31,6 +31,9 @@ const handleMessage = (bytes, uuid) => {
     // printear id de uno de los productos
     console.log(message[0].id)
     const user = users[uuid]
+    // remover productos anteriores
+    user.products = [{ }]
+    console.log(user)
 
     // for q crea un nuevo espacio en array products donde se guarda la id, nombre y cantidad de cada 
     // producto de llega de array message
