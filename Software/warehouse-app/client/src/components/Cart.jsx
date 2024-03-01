@@ -6,7 +6,7 @@ import { useCart } from "../hooks/useCart.js"
 export function Cart({ sendJsonMessage }){
 
   const checkBoxId = useId()
-  const { cart, clearCart, updateCart } = useCart()
+  const { cart, clearCart, updateCart, removeFromCart } = useCart()
 
   // sumar quantity del producto
   const handleAdd = (crt) =>{
@@ -89,7 +89,10 @@ export function Cart({ sendJsonMessage }){
                     >
                       <PlusIcon />
                     </button>
-                    <button className="prCart-trash-can">
+                    <button 
+                      className="prCart-trash-can"
+                      onClick={() => {removeFromCart(cart)}}
+                    >
                       <TrashCanIcon />
                     </button>
                   </div>
