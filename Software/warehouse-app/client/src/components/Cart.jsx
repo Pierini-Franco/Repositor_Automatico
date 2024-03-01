@@ -1,5 +1,5 @@
-import { useId, useState } from "react"
-import { CartIcon, ClearFromCartIcon, CheckCartIcon } from "./Icons.jsx"
+import { useId } from "react"
+import { CartIcon, ClearFromCartIcon, CheckCartIcon, PlusIcon, MinusIcon, TrashCanIcon } from "./Icons.jsx"
 import './Cart.css'
 import { useCart } from "../hooks/useCart.js"
 
@@ -9,13 +9,36 @@ export function Cart({ sendJsonMessage }){
   const { cart, clearCart, updateCart } = useCart()
 
   // sumar quantity del producto
-  const handleClick = (crt) =>{
+  const handleAdd = (crt) =>{
     // hallar y guardar producto q se le quiere cabiar la quantity
     let product = cart.find((cart) => cart.name === crt.name)
     // sumarle uno a quantity
     product.quantity += 1
+    if(product.quantity > product.stock){
+      product.quantity = product.stock
+    }
     console.log(product)
     // crear nuevo array con las modificacion de cantidades
+    const updatedProducts = cart.map(item => {
+      // si se halla el producto q queremos modificar, se guarda en el array el producto con la nueva cantidad 
+      if(product.name === item.name) return product
+      // si no se halla, no se modifica el producto
+      return item
+    })
+    // actualizar carrt con las quantities actualizadas
+    updateCart(updatedProducts)
+  }
+
+  // restar quantity del producto
+  const handleSubtract = (crt) =>{
+    let product = cart.find((cart) => cart.name === crt.name)
+
+    product.quantity -= 1
+    if(product.quantity === 0){
+      product.quantity = 1
+    }
+    console.log(product)
+    
     const updatedProducts = cart.map(item => {
       // si se halla el producto q queremos modificar, se guarda en el array el producto con la nueva cantidad 
       if(product.name === item.name) return product
@@ -51,15 +74,23 @@ export function Cart({ sendJsonMessage }){
                     <label htmlFor={cart.id}>
                       <small>Cantidad:</small>
                     </label>
-                    <button>
-                      -
+                    <button
+                      className="prCart-minus-button"
+                      id={cart.id}
+                      onClick={() => {handleSubtract(cart)}}
+                    >
+                      <MinusIcon />
                     </button>
                     <small>{cart.quantity}</small>
                     <button
+                      className="prCart-plus-button"
                       id={cart.id}
-                      onClick={() => {handleClick(cart)}}
+                      onClick={() => {handleAdd(cart)}}
                     >
-                      +
+                      <PlusIcon />
+                    </button>
+                    <button className="prCart-trash-can">
+                      <TrashCanIcon />
                     </button>
                   </div>
                 </div>
