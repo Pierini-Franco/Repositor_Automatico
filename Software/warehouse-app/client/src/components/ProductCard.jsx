@@ -35,6 +35,8 @@ export function ProductCard({ filteredProducts, sendJsonMessage }){
                   <div className="prCard-buttonContainer">
                     <button className="prCard-orderButton" onClick={() =>{
                       console.log(filteredProducts.name)
+                      // agregar al objeto filteredProducts la propiedad quantity = 1
+                      filteredProducts.quantity = 1
                       // guardar producto dentro de array
                       const product = [filteredProducts]
                       console.log(product)
