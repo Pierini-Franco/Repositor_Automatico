@@ -1,0 +1,40 @@
+.container-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.label-categoryFilter {
+  color: #f3efef;
+  font-size: 16px;
+  font-weight: bold; /* Más énfasis en el texto */
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: #222222;
+  color: #f3efef;
+  transition: border 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #4CAF50; /* Color verde al hacer foco */
+  background-color: #333333;
+  outline: none;
+}
+
+select option {
+  background-color: #222222;
+  color: #f3efef;
+}
+
+select:hover {
+  border-color: #4CAF50;
+  background-color: #333333;
+}

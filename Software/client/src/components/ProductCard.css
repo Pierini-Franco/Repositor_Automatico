@@ -1,0 +1,120 @@
+.productsWrap {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 16px; /* Aumentar el espacio entre las tarjetas */
+   padding: 20px; /* Agregar relleno alrededor del contenedor */
+   background-color: #f8f9fa; /* Fondo claro para destacar las tarjetas */
+   border-radius: 8px; /* Bordes redondeados */
+ }
+ 
+ .productsWrap ul {
+   display: flex;
+   justify-content: center; 
+   align-items: flex-start; /* Alinear elementos al inicio */
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 16px; /* Espacio entre los elementos */
+   padding: 0; /* Sin relleno */
+ }
+ 
+ .prCard {
+   height: 370px; /* Altura fija para las tarjetas */
+   width: 250px; /* Ancho fijo para las tarjetas */
+   margin: 10px; /* Espacio entre tarjetas */
+   display: flex; 
+   flex-direction: column;
+   justify-content: space-between; /* Espacio entre el contenido */
+   align-items: center;
+   gap: 15px; /* Espacio entre los elementos internos */
+   background-color: #ffffff; /* Fondo blanco para mayor contraste */
+   border: 1px solid #cccccc; /* Borde sutil */
+   border-radius: 10px; /* Bordes redondeados */
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+   transition: transform 0.2s; /* Suavizar efecto de hover */
+ }
+ 
+ .prCard:hover {
+   transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+ }
+ 
+ .prCard-imageContainer {
+   display: flex; 
+   justify-content: center; 
+   width: 200px; /* Ancho fijo para la imagen */
+   height: 200px; /* Altura fija para la imagen */
+ }
+ 
+ .prCard-image {
+   width: 100%; /* La imagen ocupará el 100% del contenedor */
+   height: auto; /* Mantener proporciones de la imagen */
+   border-radius: 5px; /* Bordes redondeados en la imagen */
+ }
+ 
+ .prCard-infoContainer {
+   font-family: system-ui, sans-serif; /* Uso de una fuente sans-serif */
+   width: 220px; /* Ancho fijo para el contenedor de info */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 5px; 
+   background-color: transparent; 
+   padding: 10px; /* Espacio interno para el contenedor de info */
+ }
+ 
+ .prCard-prName {
+   margin: 0 5px; /* Margen ajustado para alineación */
+   font-size: 1.1em; /* Tamaño de fuente mejorado para el nombre */
+   color: #343a40; /* Color oscuro para el texto */
+   max-height: 50px; /* Limitar altura */
+   overflow: hidden; /* Evitar desbordamiento */
+   text-overflow: ellipsis; /* Mostrar puntos suspensivos si el texto es largo */
+ }
+ 
+ .prCard-prStock {
+   color: #5a5353; /* Color gris para información secundaria */
+   margin: 0 5px; /* Margen ajustado */
+ }
+ 
+ .prCard-buttonContainer {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 8px; /* Espacio entre los botones */
+ }
+ 
+ .prCard-orderButton {
+   cursor: pointer;
+   width: 100px; /* Ancho fijo para el botón de ordenar */
+   height: 40px; /* Altura aumentada para mejor usabilidad */
+   background-color: #28a745; /* Verde para el botón de ordenar */
+   color: #ffffff; /* Texto blanco */
+   font-size: 16px; /* Tamaño de fuente */
+   border: none; /* Sin borde */
+   border-radius: 5px; /* Bordes redondeados */
+   transition: background-color 0.2s ease; /* Suave transición para el fondo */
+ }
+ 
+ .prCard-orderButton:hover {
+   background-color: #218838; /* Color más oscuro al pasar el mouse */
+ }
+ 
+ .prCard-orderButton:active {
+   opacity: 0.7; /* Efecto de opacidad al hacer clic */
+ }
+ 
+ .prCard-cartButton {
+   cursor: pointer;
+   width: 40px; /* Ancho ajustado para el botón del carrito */
+   height: 40px; /* Altura ajustada */
+   background-color: transparent; /* Fondo transparente */
+   color: #28a745; /* Color verde para el ícono del carrito */
+   border: none; /* Sin borde */
+   border-radius: 5px; /* Bordes redondeados */
+   transition: color 0.2s ease; /* Suave transición para el color */
+ }
+ 
+ .prCard-cartButton:hover {
+   color: #218838; /* Color más oscuro al pasar el mouse */
+ }
+ 

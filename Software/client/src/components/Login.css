@@ -1,0 +1,61 @@
+.titleLogin {
+  color: #ffffff; /* Color blanco para título */
+  font-size: 25px;
+  font-weight: bold; /* Añadir negrita para más énfasis */
+  margin-bottom: 15px; /* Espacio entre título y contenido */
+}
+
+.instructionLogin {
+  color: #d3d3d3; /* Un gris claro para no sobresaturar visualmente */
+  font-size: 18px; /* Aumento de tamaño para mejor legibilidad */
+  font-style: italic; /* Estilo en cursiva para diferenciar las instrucciones */
+  text-align: center; /* Alineación centrada */
+  margin-bottom: 15px; /* Mayor espacio entre instrucciones y otros elementos */
+  line-height: 0.1; /* Aumento de interlineado para mayor claridad */
+}
+
+.loginCard {
+  height: auto;
+  width: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: #111111;
+  border: 1px groove #7a7a7a;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.usernamePrompt {
+  color: #ffffff; /* Color blanco para el prompt */
+  font-size: 16px;
+  margin-bottom: 10px; /* Espacio entre el texto y el campo de entrada */
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
