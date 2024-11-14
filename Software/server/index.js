@@ -185,8 +185,32 @@ wsServer.on('connection', async (connection, request) => {
           }
           break;
 
-        // Otros casos de mensaje aquí...
+        case 'cartUpdate':
+          if (Array.isArray(data.cart)) {
+            const cart = data.cart;
+            console.log('Carrito recibido:', cart);
+  
+            cart.forEach((product) => {
+              const { direc, nivel } = product;
+              console.log(`Producto - Direc: ${direc}, Nivel: ${nivel}`);
+              publishToMQTT(inicioTopic, 1);
+              publishToMQTT(modoTopic, 0);
+              publishToMQTT(direccionTopic, direc);
+              publishToMQTT(nivelTopic, nivel);
+            });
+  
+            connection.send(JSON.stringify({
+              status: 'success',
+              message: 'Campos del carrito procesados correctamente.'
+            }));
+          } else {
+            connection.send(JSON.stringify({ status: 'error', message: 'Formato de mensaje incorrecto.' }));
+          }
+          break;
 
+        default:
+          connection.send(JSON.stringify({ status: 'error', message: 'Tipo de mensaje desconocido.' }));
+          break;
       }
     } catch (err) {
       console.error('Error al procesar mensaje:', err);
