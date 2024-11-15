@@ -1,0 +1,10 @@
+
+*.ts
+*.map
+*.json
+*.mjs
+*.md
+*.js
+/Software/client/node_modules
+/Software/server/node_modules
+/versionesBeta/warehouse-app
