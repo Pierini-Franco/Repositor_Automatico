@@ -1,3 +1,74 @@
 <!-- content/wiki.html -->
-<h2>Modo de Uso</h2>
-<p></p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo de Uso - Proyecto Kosmos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #0056b3;
+            margin-top: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .content p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .content img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .steps {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        .steps li {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Modo de Uso</h2>
+
+    <div class="content">
+        <p>
+            Para utilizar este proyecto, se emplea una página web diseñada para realizar pedidos, renovar o editar productos. A continuación, se describen los pasos para operar el sistema:
+        </p>
+
+        <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Pagina%20react.png" alt="Interfaz de la página web del Proyecto Kosmos">
+
+        <ul class="steps">
+            <li>El usuario ingresa a la página web para realizar un pedido indicando el producto deseado y la cantidad.</li>
+            <li>El robot se activa automáticamente y se dirige a la ubicación del producto solicitado.</li>
+            <li>El robot transporta el producto a la base de recepción para que el usuario recoja la cantidad especificada.</li>
+            <li>Después de retirar los productos, el usuario debe presionar el botón rojo en el robot para indicarle que puede regresar el pedido.</li>
+            <li>Posteriormente, el robot vuelve a su base de espera.</li>
+            <li>Finalmente, tras presionar el botón de finalización, la página web actualiza automáticamente el valor del stock en el sistema.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

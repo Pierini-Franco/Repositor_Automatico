@@ -5,67 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentación - Kosmos Electronics</title>
     <style>
-        /* Reset de márgenes y relleno por defecto */
+        /* Estilo general */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Estilos generales del body */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
             line-height: 1.6;
         }
 
-        /* Contenedor principal de la documentación */
         .documentation {
-            padding: 20px;
-            margin: 0 auto;
             max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Título principal de la sección */
-        .documentation h2 {
-            font-size: 2rem;
-            color: #333;
+        h1, h2, h3, h4 {
+            color: #0056b3;
+        }
+
+        h1 {
+            text-align: center;
             margin-bottom: 20px;
+            color: #0056b3; /* Cambia el color del título a blanco */
         }
 
-        /* Estilos para cada sección */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
         .section {
             margin-bottom: 30px;
             padding: 20px;
-            border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: #f9f9f9;
-            width: 100%;   /* Asegura que el contenedor sea del 100% del ancho disponible */
+            background: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
-        /* Títulos de las secciones */
-        .section h3 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        /* Párrafos dentro de cada sección */
-        .section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        /* Estilos para las imágenes dentro de las secciones */
         .section img {
-            width: 100%;        /* La imagen ocupará el 100% del ancho del contenedor */
-            height: auto;       /* La altura se ajustará automáticamente para mantener la proporción */
-            max-width: 100%;    /* Evita que la imagen se estire más allá de su tamaño original */
-            margin-top: 10px;
-            border-radius: 8px; /* Esquinas redondeadas */
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
         }
 
-        /* Fondo diferente para cada sección (opcional) */
+        /* Secciones específicas */
         #hardware {
             background-color: #e7f3e7; /* Verde claro */
         }
@@ -77,61 +71,79 @@
         #software {
             background-color: #f0f8ff; /* Azul claro */
         }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
 
     <div class="documentation">
         <h1>Documentación</h1>
-        <p>Bienvenido a la sección de Documentación del proyecto. Aquí encontrarás los recursos y guías detalladas sobre el funcionamiento de nuestro sistema, incluyendo hardware, software y firmware.</p>
+        <p>
+            Bienvenido a la documentación oficial de **Kosmos Electronics**. Aquí encontrarás información detallada sobre hardware, firmware y software del proyecto.
+        </p>
 
+        <!-- Sección de Hardware -->
         <div class="section" id="hardware">
             <h2>Hardware</h2>
-            <p>La parte física del dispositivo, incluyendo los circuitos y componentes electrónicos.</p>
+            <p>
+                Esta sección detalla los componentes físicos del dispositivo, incluyendo circuitos, placas electrónicas y modelos 3D.
+            </p>
             <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Hardware.png" alt="Imagen del Hardware">
-            <h3>Placa Principal</h3>
-            <h4>Símbolo:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/ControlSim.png" alt="Imagen del Control">
-            <h4>PCB:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/ControlPCB.png" alt="Imagen del Control">
-            <h4>MODELO 3D:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Control3D.png" alt="Imagen del Control">
-            
 
+            <h3>Placa Principal</h3>
+            <ul>
+                <li><strong>Símbolo:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/ControlSim.png" alt="Imagen del Control">
+                <li><strong>PCB:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/ControlPCB.png" alt="Imagen del Control PCB">
+                <li><strong>Modelo 3D:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Control3D.png" alt="Modelo 3D del Control">
+            </ul>
 
             <h3>Placa Drivers</h3>
-            <h4>Símbolo:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/DriversSim.png" alt="Imagen del Drivers">
-            <h4>PCB:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/DriversPCB.png" alt="Imagen del Drivers">
-            <h4>MODELO 3D:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Drivers3D.png" alt="Imagen del Drivers">
-
+            <ul>
+                <li><strong>Símbolo:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/DriversSim.png" alt="Imagen del Drivers">
+                <li><strong>PCB:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/DriversPCB.png" alt="PCB del Drivers">
+                <li><strong>Modelo 3D:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Drivers3D.png" alt="Modelo 3D del Drivers">
+            </ul>
 
             <h3>Placa Sensores</h3>
-            <h4>Símbolo:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/SensoresSim.png" alt="Imagen de Sensores">
-            <h4>PCB:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/SensoresPCB.png" alt="Imagen del Sensores">
-            <h4>MODELO 3D:</h4>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Sensores3D.png" alt="Imagen del Sensores">
-
+            <ul>
+                <li><strong>Símbolo:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/SensoresSim.png" alt="Imagen de Sensores">
+                <li><strong>PCB:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/SensoresPCB.png" alt="PCB de Sensores">
+                <li><strong>Modelo 3D:</strong></li>
+                <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Sensores3D.png" alt="Modelo 3D de Sensores">
+            </ul>
 
             <h3>Placa Step Down MINI-360</h3>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Mini360.png" alt="Imagen del MINI-360">
-
+            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/Mini360.png" alt="Imagen del Step Down MINI-360">
         </div>
 
+        <!-- Sección de Firmware -->
         <div class="section" id="firmware">
-            <h3>Firmware</h3>
-            <p>El firmware es el software que se ejecuta directamente en el hardware. Es esencial para que el dispositivo funcione correctamente.</p>
+            <h2>Firmware</h2>
+            <p>
+                El firmware es el software embebido que controla directamente el hardware del dispositivo, garantizando su correcto funcionamiento.
+            </p>
         </div>
 
+        <!-- Sección de Software -->
         <div class="section" id="software">
-            <h3>Software</h3>
-            <p>El software que gestiona la interacción con el hardware y permite que el dispositivo realice las tareas asignadas.</p>
-            <h3>Diagrama de comunicaciones:</h3>
-            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/DiagramaComunic.png" alt="Diagrama de comunicaciones">
+            <h2>Software</h2>
+            <p>
+                El software gestiona la comunicación entre el usuario y el hardware, permitiendo una interacción fluida y eficiente.
+            </p>
+            <h3>Diagrama de comunicaciones</h3>
+            <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/DiagramaComunic.png" alt="Diagrama de comunicaciones del proyecto">
         </div>
     </div>
 

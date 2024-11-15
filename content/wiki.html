@@ -1,9 +1,72 @@
 <!-- content/wiki.html -->
-<h2>Wiki</h2>
-<p>El objetivo de este documento se centra en introducir al desarrollo y funcionamiento un robot a escala que transporta productos desde una estación 
-    de recolección a un almacén/depósito. Se basa en un sistema en el cual el usuario solicitara un producto deseado y la cantidad del mismo y, como 
-    respuesta, el robot lo buscará y se lo llevará al usuario, o, si el usuario lo requiere, se depositara el producto en el robot para que este lo 
-    transporte a su respectivo lugar de almacenamiento en función de reponer stock, realizar tareas de mantenimiento o de logística. El móvil estará 
-    orientado al uso de palets y su sistema de agarre será similar al de una carretilla elevadora.
-</p>
-<img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/ImgIlustKosmos.png" alt="Imagen Ilustrativa Kosmos">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki del Robot Kosmos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #0056b3;
+            margin-top: 20px;
+        }
+        p {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: justify;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Wiki del Robot Kosmos</h2>
+
+    <p>
+        El objetivo de este documento se centra en introducir al desarrollo y funcionamiento de un robot a escala que transporta productos desde una estación 
+        de recolección a un almacén/depósito. Se basa en un sistema en el cual el usuario solicitará un producto deseado y la cantidad del mismo y, como 
+        respuesta, el robot lo buscará y se lo llevará al usuario. Alternativamente, si el usuario lo requiere, el producto puede depositarse en el robot para 
+        que este lo transporte a su respectivo lugar de almacenamiento, permitiendo reponer stock, realizar tareas de mantenimiento o llevar a cabo tareas 
+        de logística. El móvil estará orientado al uso de palets y su sistema de agarre será similar al de una carretilla elevadora.
+    </p>
+
+    <div class="gallery">
+        <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/ImgIlustKosmos.png" alt="Ilustración del Robot Kosmos">
+        <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/KosmosCarro.jpg" alt="Robot Kosmos en acción" width="50%">
+        <img src="https://Pierini-Franco.github.io/Repositor_Automatico/imagenes/KosmosCarroDest.jpg" alt="Detalle del Robot Kosmos" width="50%">
+    </div>
+
+
+
+</body>
+</html>
