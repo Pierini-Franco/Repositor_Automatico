@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - Kosmos Electronics</title>
+    <style>
+        /* Reset de márgenes y relleno por defecto */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos generales del body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Contenedor principal de la documentación */
+        .documentation {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 960px;
+        }
+
+        /* Título principal de la sección */
+        .documentation h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para cada sección */
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            width: 100%;   /* Asegura que el contenedor sea del 100% del ancho disponible */
+        }
+
+        /* Títulos de las secciones */
+        .section h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Párrafos dentro de cada sección */
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Estilos para las imágenes dentro de las secciones */
+        .section img {
+            width: 100%;        /* La imagen ocupará el 100% del ancho del contenedor */
+            height: auto;       /* La altura se ajustará automáticamente para mantener la proporción */
+            max-width: 100%;    /* Evita que la imagen se estire más allá de su tamaño original */
+            margin-top: 10px;
+            border-radius: 8px; /* Esquinas redondeadas */
+        }
+
+        /* Fondo diferente para cada sección (opcional) */
+        #hardware {
+            background-color: #e7f3e7; /* Verde claro */
+        }
+
+        #firmware {
+            background-color: #f7f7f7; /* Gris claro */
+        }
+
+        #software {
+            background-color: #f0f8ff; /* Azul claro */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="documentation">
+        <h1>Documentación</h1>
+        <p>Bienvenido a la sección de Documentación del proyecto. Aquí encontrarás los recursos y guías detalladas sobre el funcionamiento de nuestro sistema, incluyendo hardware, software y firmware.</p>
+
+        <div class="section" id="hardware">
+            <h2>Hardware</h2>
+            <p>La parte física del dispositivo, incluyendo los circuitos y componentes electrónicos.</p>
+            <img src="../imagenes/Hardware.png" alt="Imagen del Hardware">
+            <h3>Placa Principal</h3>
+            <h4>Símbolo:</h4>
+            <img src="../imagenes/ControlSim.png" alt="Imagen del Hardware">
+            <h4>PCB:</h4>
+            <img src="../imagenes/ControlPCB.png" alt="Imagen del Hardware">
+            <h4>MODELO 3D:</h4>
+            <img src="../imagenes/Control3D.png" alt="Imagen del Hardware">
+            
+
+
+            <h3>Placa Drivers</h3>
+
+            <h3>Placa Sensores</h3>
+
+            <h3>Placa Step Down MINI-360</h3>
+        </div>
+
+        <div class="section" id="firmware">
+            <h3>Firmware</h3>
+            <p>El firmware es el software que se ejecuta directamente en el hardware. Es esencial para que el dispositivo funcione correctamente.</p>
+        </div>
+
+        <div class="section" id="software">
+            <h3>Software</h3>
+            <p>El software que gestiona la interacción con el hardware y permite que el dispositivo realice las tareas asignadas.</p>
+        </div>
+    </div>
+
+</body>
+</html>
