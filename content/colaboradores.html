@@ -1,3 +1,142 @@
-<!-- content/wiki.html -->
-<h2>Colaboradores</h2>
-<p>Bienvenido a la sección Wiki del proyecto. Aquí puedes encontrar información básica sobre el proyecto, su historia y su propósito.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaboradores - Kosmos Electronics</title>
+    <style>
+        /* Estilo general */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .team-container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .team-title h2 {
+            color: #0056b3;
+        }
+
+        .team-intro {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .team-member {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 2px solid #0056b3;
+        }
+
+        .team-member h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .team-member a {
+            display: inline-block;
+            text-decoration: none;
+            color: #0056b3;
+            font-size: 0.9em;
+            border: 1px solid #0056b3;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .team-member a:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="team-container">
+        <div class="team-title">
+            <h2>Colaboradores</h2>
+        </div>
+        <p class="team-intro">
+            Bienvenido a la sección de colaboradores. Aquí puedes conocer a las personas detrás de este proyecto, sus roles y cómo contactarlos.
+        </p>
+
+        <div class="team-grid">
+            <!-- Miembro del equipo -->
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Foto de perfil de Juan Cruz Martinez">
+                <h3>Juan Cruz Martinez</h3>
+                <p>Ingeniero en Firmware y Diseñador de Hardware</p>
+                <a href="mailto:martinezjuancruz@industrialdetemperley.edu.ar">Contactar</a>
+            </div>
+
+            <!-- Miembro del equipo -->
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Foto de perfil de Franco">
+                <h3>Pierini Franco</h3>
+                <p>Desarrollador de Software</p>
+                <a href="mailto:francopierini05@gmail.com">Contactar</a>
+            </div>
+
+            <!-- Miembro del equipo -->
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Foto de perfil de Carlos López">
+                <h3>Sturm Rodrigo Héctor</h3>
+                <p>Especialista en Software</p>
+                <a href="mail:rodristurm@gmail.com">Contactar</a>
+            </div>
+
+            <!-- Miembro del equipo -->
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Foto de perfil de María Rodríguez">
+                <h3>Martinez Iris</h3>
+                <p>Diseñadora Gráfica y Encargada de Fabricación</p>
+                <a href="mailto:maria.rodriguez@kosmos.com">Contactar</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

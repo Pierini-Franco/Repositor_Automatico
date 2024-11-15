@@ -35,7 +35,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #0056b3; /* Cambia el color del título a blanco */
+            color: #0056b3;
         }
 
         p {
@@ -57,6 +57,34 @@
             display: block;
             margin: 10px auto;
             border-radius: 8px;
+        }
+
+        /* Estilo del índice */
+        .index {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .index ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .index ul li {
+            margin: 5px 0;
+        }
+
+        .index ul li a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .index ul li a:hover {
+            color: #333;
         }
 
         /* Secciones específicas */
@@ -85,6 +113,16 @@
         <p>
             Bienvenido a la documentación oficial de **Kosmos Electronics**. Aquí encontrarás información detallada sobre hardware, firmware y software del proyecto.
         </p>
+
+        <!-- Índice de Secciones -->
+        <div class="index">
+            <h3>Índice</h3>
+            <ul>
+                <li><a href="#hardware">Hardware</a></li>
+                <li><a href="#firmware">Firmware</a></li>
+                <li><a href="#software">Software</a></li>
+            </ul>
+        </div>
 
         <!-- Sección de Hardware -->
         <div class="section" id="hardware">
