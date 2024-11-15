@@ -1,0 +1,73 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Barra de navegación */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Contenido principal */
+main {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+.content-category {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.content-category p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Estilos para la visualización */
+.show {
+    display: block;
+}

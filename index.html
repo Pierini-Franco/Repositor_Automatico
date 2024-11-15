@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Mejorada - Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <div class="container">
+            <h1>Wiki Mejorada del Proyecto</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showCategory('wiki')">Wiki</a></li>
+                    <li><a href="#" onclick="showCategory('documentacion')">Documentación</a></li>
+                    <li><a href="#" onclick="showCategory('software')">Software</a></li>
+                    <li><a href="#" onclick="showCategory('hardware')">Hardware</a></li>
+                    <li><a href="#" onclick="showCategory('firmware')">Firmware</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de contenido -->
+    <main>
+        <div class="container">
+            <section id="wiki" class="content-category">
+                <h2>Wiki</h2>
+                <p>Bienvenido a la sección Wiki del proyecto. Aquí puedes encontrar información básica sobre el proyecto, su historia y su propósito.</p>
+            </section>
+            <section id="documentacion" class="content-category">
+                <h2>Documentación</h2>
+                <p>En esta sección encontrarás documentación técnica, manuales de usuario, y más recursos detallados sobre el proyecto.</p>
+            </section>
+            <section id="software" class="content-category">
+                <h2>Software</h2>
+                <p>En esta sección se explica cómo interactuar con el software asociado al proyecto. Incluye tutoriales y guías de instalación.</p>
+            </section>
+            <section id="hardware" class="content-category">
+                <h2>Hardware</h2>
+                <p>Aquí se explica todo lo relacionado con el hardware del proyecto: componentes, conexiones, esquemas, y más.</p>
+            </section>
+            <section id="firmware" class="content-category">
+                <h2>Firmware</h2>
+                <p>En esta sección encontrarás información sobre el firmware del proyecto, incluyendo código y guías de instalación.</p>
+            </section>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
